@@ -81,7 +81,7 @@ class main:
 
 
 if __name__ == '__main__':
-    list = os.environ["LIST"]
+    list = '[{"app_id":"wx4267b99c0a9e982a","app_secret":"0f9e9b7bbaeb1ef4a006dabcefc7f638","start_date":"2021-12-10","city":"北京","birthday":"03-19","user_id":"ouipF6gVu2Qwt2wCH27nSnVwS6mE","template_id":"a28bwN6TXymNqTFmj4WpdMDlDBJJufxPynoRElzMiHU"},{"app_id":"wx4267b99c0a9e982a","app_secret":"0f9e9b7bbaeb1ef4a006dabcefc7f638","start_date":"2021-12-10","city":"北京","birthday":"10-03","user_id":"ouipF6unW439JREYmnkwssLo1UMw","template_id":"a28bwN6TXymNqTFmj4WpdMDlDBJJufxPynoRElzMiHU"},{"app_id":"wx4267b99c0a9e982a","app_secret":"0f9e9b7bbaeb1ef4a006dabcefc7f638","start_date":"2001-03-19","city":"北京","birthday":"09-06","user_id":"ouipF6nFMAkmqzyhDxKhg7cdaOk0","template_id":"jdI2j7APhfAvmSrCwCs_BI-att9xk0bYO2QwdykQhys"},{"app_id":"wx4267b99c0a9e982a","app_secret":"0f9e9b7bbaeb1ef4a006dabcefc7f638","start_date":"2019-10-15","city":"唐山","birthday":"10-24","user_id":"ouipF6jWTzlStu5kcPTX0UWKssNc","template_id":"jdI2j7APhfAvmSrCwCs_BI-att9xk0bYO2QwdykQhys"}]'
     list = json.loads(list)
     for i in list:
         main(i['app_id'], i['app_secret'], i['start_date'], i['city'], i['birthday'], i['user_id'], i['template_id'])
