@@ -14,7 +14,7 @@ birthday = '10-03'
 app_id = 'wx4267b99c0a9e982a'
 app_secret = '0f9e9b7bbaeb1ef4a006dabcefc7f638'
 
-user_id = 'ouipF6unW439JREYmnkwssLo1UMw'
+user_id = os.environ["USER_ID"]
 template_id = 'qC7E-QvdBZQmtZZOIQoqyxtQSkMpAC9HRdG-jZA_H2A'
 
 print(city+app_id+app_secret+user_id)
