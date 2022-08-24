@@ -81,7 +81,7 @@ class main:
 
 
 if __name__ == '__main__':
-    list =  os.environ["LIST"]
+    list = os.environ["LIST"]
     list = json.loads(list)
     for i in list:
         main(i['app_id'], i['app_secret'], i['start_date'], i['city'], i['birthday'], i['user_id'], i['template_id'])
