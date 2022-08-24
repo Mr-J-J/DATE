@@ -27,7 +27,7 @@ class main:
         self.app_secret = app_secret
         self.user_id = user_id
         self.template_id = template_id
-        print(self.template_id, self.user_id ,self.app_id, self.app_secret)
+        print(self.template_id, self.user_id, self.app_id, self.app_secret)
         self.client = WeChatClient(self.app_id, self.app_secret)
 
         self.wm = WeChatMessage(self.client)
@@ -81,7 +81,7 @@ class main:
 
 
 if __name__ == '__main__':
-    list =  os.environ["LIST"]
+    list = os.environ["LIST"]
     list = json.loads(list)
     for i in list:
         main(i['app_id'], i['app_secret'], i['start_date'], i['city'], i['birthday'], i['user_id'], i['template_id'])
