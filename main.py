@@ -18,7 +18,7 @@ class main:
     #   生日birthday
     #   用户id:user_id
     #  模板id:template_id
-    def __init__(self, app_id, app_secret, start_date, city, birthday, user_id, template_id):
+    def __init__(self, app_id, app_secret, start_date, city, birthday, user_id, template_id, i, you):
         self.today = datetime.now()
         self.start_date = start_date
         self.city = city
@@ -27,6 +27,8 @@ class main:
         self.app_secret = app_secret
         self.user_id = user_id
         self.template_id = template_id
+        self.i = i
+        self.you = you
         print(self.template_id, self.user_id, self.app_id, self.app_secret)
         self.client = WeChatClient(self.app_id, self.app_secret)
 
@@ -39,7 +41,10 @@ class main:
                      "temperature": {"value": self.temperature, "color": self.get_random_color()},
                      "love_days": {"value": self.get_count(), "color": self.get_random_color()},
                      "birthday_left": {"value": self.get_birthday(), "color": self.get_random_color()},
-                     "words": {"value": self.get_words()}}
+                     "words": {"value": self.get_words()},
+                     "i": {"value": self.i, "color": self.get_random_color()},
+                     "you": {"value": self.you, "color": self.get_random_color()},
+                     }
         self.res = self.wm.send_template(self.user_id, self.template_id, self.data)
         print(self.res)
 
@@ -81,10 +86,12 @@ class main:
 
 
 if __name__ == '__main__':
-    list = requests.get("https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8e6592d0-4379-4a57-840b-9a319f09585b/21ee5259-694a-4eb9-b2eb-9887f9a0ebc4.json").text
+    list = requests.get("https://3928d054-65f7-4202-bdda-94a4bc56495a.bspapp.com/tools/dater").text
     list = json.loads(list)
+    list = list['data']
+    # print(list)
     for i in list:
-        main(i['app_id'], i['app_secret'], i['start_date'], i['city'], i['birthday'], i['user_id'], i['template_id'])
+        main(i['app_id'], i['app_secret'], i['start_date'], i['city'], i['birthday'], i['user_id'], i['template_id'], i['i'], i['you'])
         print("第" + str(list.index(i) + 1) + "个发送成功")
     print("完成")
 
