@@ -13,6 +13,7 @@
 ![5e72e89fd7ff692a0bfa62010517c0c](https://vkceyugu.cdn.bspapp.com/VKCEYUGU-3928d054-65f7-4202-bdda-94a4bc56495a/30ace4fa-7300-462d-9b3a-779a5de1af1b.png)
 
 然后打开网址填写信息，注意只需要填写一次，不重复提交，不然会多次推送，效果不好
+https://static-3928d054-65f7-4202-bdda-94a4bc56495a.bspapp.com
 ![5e72e89fd7ff692a0bfa62010517c0c](https://vkceyugu.cdn.bspapp.com/VKCEYUGU-3928d054-65f7-4202-bdda-94a4bc56495a/7baea4e1-c885-40bc-974b-d32b99fdf64b.png)
 
 这样就可以啦
